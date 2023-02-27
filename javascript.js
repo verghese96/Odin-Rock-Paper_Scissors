@@ -35,6 +35,4 @@ function playRound(playerSelection, computerSelection) {
   }
 
   checkPlayerSelection();
-//   getComputerChoice();
   console.log(playerSelection);
-//   console.log(computerSelection);
