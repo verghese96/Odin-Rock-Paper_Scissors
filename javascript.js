@@ -18,9 +18,10 @@ function checkPlayerSelection () {
 
     }
 
-var computerSelection = Math.floor((Math.random()*3)+1);
+var computerSelection;
 
 function getComputerChoice(){
+    computerSelection = Math.floor((Math.random()*3)+1);
     if (computerSelection == 1){
         computerSelection = "scissors";
         return computerSelection;
@@ -62,17 +63,16 @@ function playRound(playerSelection, computerSelection) {
     }
   }
 
-// function game(){
-//     for (let i = 0; i < 5; i++) {
-//         checkPlayerSelection();
-//         getComputerChoice();
-//         result = playRound(playerSelection, computerSelection;
-//         console.log(`In round ${i}, ${result}`)
-//      }
-// }
+function game(){
+    for (let i = 0; i < 5; i++) {
+        playerSelection = prompt("Please enter your choice?")
+        checkPlayerSelection();
+        getComputerChoice();
+        playRound();
+        console.log("You have selected " + playerSelection);
+        console.log("The computer has selected " +computerSelection);
+        console.log(`In round ${i+1}, ${playRound(playerSelection, computerSelection)}`)
+     }
+}
 
-checkPlayerSelection();
-getComputerChoice();
-console.log(playerSelection);
-console.log(computerSelection);
-console.log(playRound(playerSelection, computerSelection));
+game();
