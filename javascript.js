@@ -1,17 +1,20 @@
 var playerSelection;
 var computerSelection;
 var result;
+const scissors = "scissors";
+const rock = "rock";
+const paper = "paper";
 
 function checkPlayerSelection () {
     playerSelection = playerSelection.toLocaleLowerCase();
 
-    if (playerSelection=="scissors" ){
+    if (playerSelection== scissors){
         return playerSelection;
     }   
-    else if (playerSelection=="rock"){
+    else if (playerSelection== rock){
         return playerSelection;
     }
-    else if (playerSelection=="paper"){
+    else if (playerSelection== paper){
         return playerSelection;
     }
     else{
@@ -25,35 +28,35 @@ function getComputerChoice(){
     computerSelection = Math.floor((Math.random()*3)+1);
     switch (computerSelection) {
         case 1:
-            computerSelection = "scissors";
+            computerSelection = scissors;
             return computerSelection;
         case 2:
-            computerSelection = "paper";
+            computerSelection = paper;
             return computerSelection;
         case 3:
-            computerSelection = "rock";
+            computerSelection = rock;
             return computerSelection;
     }
   }
 
 
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection == "scissors" && computerSelection == "paper") {
+    if (playerSelection == scissors && computerSelection == paper) {
         return result = "Congrats! You win!"; 
     }
-    else if (playerSelection == "scissors" && computerSelection == "rock") {
+    else if (playerSelection == scissors && computerSelection == rock) {
         return result = "No.. You lost!"; 
     }
-    else if (playerSelection == "paper" && computerSelection == "scissors") {
+    else if (playerSelection == paper && computerSelection == scissors) {
         return result = "No.. You lost!"; 
     }
-    else if (playerSelection == "paper" && computerSelection == "rock") {
+    else if (playerSelection == paper && computerSelection == rock) {
         return result = "Congrats! You win!";
     }
-    else if (playerSelection == "rock" && computerSelection == "scissors") {
+    else if (playerSelection == rock && computerSelection == scissors) {
         return result = "Congrats! You win!";
     }     
-    else if (playerSelection == "rock" && computerSelection == "paper") {
+    else if (playerSelection == rock && computerSelection == paper) {
         return result = "No.. You lost!"; 
     } 
     else if (playerSelection == computerSelection) {
