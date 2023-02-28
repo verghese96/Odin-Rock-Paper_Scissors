@@ -1,11 +1,9 @@
-console.log("Hello World");
-
-var playerSelection = prompt()
+var playerSelection = prompt("Please enter your choice?")
 
 function checkPlayerSelection () {
     playerSelection = playerSelection.toLocaleLowerCase();
 
-    if (playerSelection== "scissors" ){
+    if (playerSelection=="scissors" ){
         return playerSelection;
     }
     else if (playerSelection=="rock"){
@@ -20,19 +18,29 @@ function checkPlayerSelection () {
 
     }
 
+var computerSelection = Math.floor((Math.random()*3)+1);
 
-var computerSelection;
+function getComputerChoice(){
+    if (computerSelection = 1){
+        computerSelection = "scissors";
+        return computerSelection;
+    }
+    else if (computerSelection= 2){
+        computerSelection = "paper";
+        return computerSelection;
+    }
+    else if (computerSelection= 3){
+        computerSelection = "rock";
+        return computerSelection;
+    }
+  }
 
-function getComputerChoice(computerSelection){
-    var x = ["scissors","paper","rock"];
-    var  i = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
-    var computerSelection = x[i];
-    return computerSelection;
-}
 
 function playRound(playerSelection, computerSelection) {
     // your code here!
   }
 
   checkPlayerSelection();
+  getComputerChoice();
   console.log(playerSelection);
+  console.log(computerSelection);
