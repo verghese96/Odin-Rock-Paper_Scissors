@@ -66,15 +66,17 @@ function playRound(playerSelection, computerSelection) {
 
 function game(){
     for (let i = 0; i < 5; i++) {
-        playerSelection = prompt("Please enter your choice?")
+        playerSelection = prompt("Please enter either Rock, Paper, Scissors!")
 
         checkPlayerSelection();
         getComputerChoice();
         playRound(playerSelection, computerSelection);
 
+        console.log ("In round " + (i+1));
         console.log("You have selected " + playerSelection);
         console.log("The computer has selected " +computerSelection);
-        console.log(`In round ${i+1}, ${result}`)
+        console.log(result);
+        console.log(" ");
      }
 }
 
